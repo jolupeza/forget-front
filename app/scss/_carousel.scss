@@ -1,0 +1,97 @@
+.Carousel {
+  &--home {
+    background-color: $green;
+    height: 100vh;
+    .Carousel__inner {
+      height: 100%;
+    }
+    .Carousel__item {
+      height: 100%;
+    }
+    .Carousel__body {
+      @include display-flex();
+      @include align-content(center);
+      height: 100%;
+    }
+    .Carousel__caption, .Carousel__figure {
+      width: 50%;
+    }
+    .Carousel__caption {
+      @include display-flex();
+      @include flex-wrap(wrap);
+      @include align-content(center);
+      bottom: auto;
+      left: auto;
+      padding: 0 0 0 13rem;
+      position: relative;
+      right: auto;
+      text-align: left;
+      @media screen and (max-width: 1399px) {
+        padding-left: 8rem;
+      }
+      @media screen and (max-width: 1199px) {
+        padding-left: 1rem;
+      }
+      p {
+        color: white;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1.125em;
+      }
+    }
+    .Carousel__title, p {
+      width: 100%;
+    }
+    .Carousel__title {
+      color: $red;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 7em;
+      font-weight: bold;
+      @include text-shadow(none);
+    }
+    .Carousel__text {
+      margin-bottom: 3rem;
+    }
+    .Carousel__figure {
+      @include display-flex();
+      @include justify-content(center);
+      img {
+        -o-object-fit: contain;
+        object-fit: contain;
+      }
+    }
+    .Carousel__bottom {
+      bottom: 15px;
+      position: absolute;
+      text-align: center;
+      width: 100%;
+    }
+    .Carousel__bottom--btn {
+      background-color: $greenSoft;
+      border: none;
+      @include border-radius(50%);
+      color: white;
+      cursor: pointer;
+      font-size: 1.5em;
+      padding: .5em .8em;
+      @include transition(transform .3s ease-out);
+      &:focus, &:hover {
+        @include transform(scale(1.1));
+      }
+    }
+    .Carousel__indicators {
+      @include align-items(center);
+      bottom: 80px;
+      li {
+        @include border-radius(50%);
+        cursor: pointer;
+        height: 11px;
+        width: 11px;
+        @include transition(width .2s ease, height .2s ease-in-out);
+        &.active {
+          height: 15px;
+          width: 15px;
+        }
+      }
+    }
+  }
+}

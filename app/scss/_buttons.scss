@@ -1,0 +1,33 @@
+.Btn {
+  @include border-radius(10px);
+  font-family: $montserrat;
+  font-size: 1em;
+  font-weight: 700;
+  padding: .8rem 4rem;
+  @include transition(background-color .3s ease, color .5s ease-out);
+  &--outline--red {
+    border: 2px solid $red;
+    color: $red;
+    padding: .8rem 2rem;
+    &:focus, &:hover {
+      background-color: $red;
+      color: white;
+    }
+  }
+  &--green {
+    background-color: $green;
+    color: white;
+    &:focus, &:hover {
+      background-color: $greenSoft;
+      color: white;
+    }
+  }
+  &--red {
+    background-color: $red;
+    color: white;
+    &:focus, &:hover {
+      background-color: lighten($red, .6);
+      color: white;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.Form {
+
+}
+.Form__group {
+  margin-bottom: 3rem;
+}
+.Form__label {
+  color: $greySoft;
+  font-family: $montserrat;
+  font-size: 0.875em;
+  font-weight: 700;
+}
+.Form__input {
+  &[type="text"], &[type="email"] {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid $greySoft;
+    @include border-radius(0);
+    color: $greyHard;
+    font-family: $opensans;
+    font-weight: 600;
+    @include input-placeholder {
+      color: $greySoft;
+    }
+    &:focus {
+      @include box-shadow(0 0 0 0.2rem rgba($grey, .25));
+    }
+  }
+}

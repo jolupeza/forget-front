@@ -1,0 +1,59 @@
+.Box {
+  background-color: rgba(white, .77);
+  @include border-radius(1rem);
+  margin: 2rem 0;
+  padding: 3rem 4rem 0.3rem;
+}
+.Box__categories {
+  @include display-flex();
+  @include flex-wrap(wrap);
+  @include justify-content(space-between);
+  margin: 3rem 0;
+}
+.Box__categories__item {
+  margin-bottom: 4rem;
+  width: 23%;
+}
+.Box__categories__figure {
+  //background-color: $green;
+  @include border-radius(5px);
+  cursor: pointer;
+  height: 0;
+  padding-bottom: 100%;
+  position: relative;
+  &--purple {
+    background-color: $purple;
+  }
+  &--green {
+    background-color: $green;
+  }
+  &--skyBlue {
+    background-color: $skyBlue;
+  }
+  &--skyBlueHard {
+    background-color: $skyBlueHard;
+  }
+  &--lightGreen {
+    background-color: $lightGreen;
+  }
+  &--yellow {
+    background-color: $yellow;
+  }
+  &:hover {
+    .Box__categories__icon {
+      @include transform(scale(1.1));
+    }
+  }
+}
+.Box__categories__icon {
+  color: rgba(white, .77);
+  bottom: 15px;
+  font-size: 2em;
+  position: absolute;
+  right: 15px;
+  @include transition(transform .3s ease-out);
+  @include text-shadow(1px 1px 3px rgba($grey, 0.8));
+  &.active {
+    color: $red;
+  }
+}

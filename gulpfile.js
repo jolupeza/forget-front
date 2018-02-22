@@ -29,17 +29,18 @@ let config = {
 
 gulp.task('style', () => {
   return gulp.src(config.scssDir + '/*.scss')
-      .pipe(sourcemaps.init())
+      //.pipe(sourcemaps.init())
       .pipe(compass({
         css: config.cssDir,
         sass: config.scssDir,
         image: config.imgDir,
+        sourcemap: true
       }))
       .on('error', function(error) {
         console.log(error);
         this.emit('end');
       })
-      .pipe(sourcemaps.write('./maps'))
+      //.pipe(sourcemaps.write('../maps'))
       .pipe(gulp.dest(config.cssDir))
       .pipe(sync.stream())
 });
@@ -91,9 +92,9 @@ gulp.task('js-sync', ['compress'], () => {
 //gulp.task('browsersync', ['compress', 'style'], () =>
 gulp.task('browsersync', ['style'], () => {
   sync.init({
-    proxy: "norma-front.app",
-    browser: "firefox"
-    //browser: ["google chrome", "firefox"]
+    proxy: "forget-front.app",
+    browser: "chrome"
+    //browser: ["chrome", "firefox"]
   });
 
   gulp.watch([config.template + '/*.html', config.scssDir + '/**/*.scss']).on('change', sync.reload);

@@ -1,0 +1,50 @@
+.Footer {
+  background-color: $whiteSoft;
+  padding: 3rem 0;
+}
+.Footer__nav {
+  @include display-flex();
+  height: 100%;
+}
+.Footer__menu {
+  @include display-flex();
+  @include justify-content(space-around);
+  @include align-items(center);
+  list-style: none;
+  margin-bottom: 0;
+  padding-left: 0;
+  width: 100%;
+}
+.Footer__menu__item {
+  font-family: $montserrat;
+  font-weight: 700;
+  a {
+    color: $grey;
+    @include transition(color .4s ease-in);
+    &:focus, &:hover {
+      color: $greyHard;
+      text-decoration: none;
+    }
+  }
+}
+.Footer__social {
+  @include display-flex();
+  @include justify-content(flex-end);
+  @include align-items(center);
+  height: 100%;
+  list-style: none;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+.Footer__social__item {
+  font-size: 1.5em;
+  margin-right: 10px;
+  a {
+    color: $grey;
+    @include transition(color .4s ease-in);
+    &:focus, &:hover {
+      color: $greyHard;
+      text-decoration: none;
+    }
+  }
+}
