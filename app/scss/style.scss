@@ -1,4 +1,8 @@
-@import "compass/css3";
+// Bootstrap
+@import './../../node_modules/bootstrap/scss/bootstrap';
+
+//  Animate
+@import "./../../node_modules/animate.css/animate";
 
 @import "vars";
 @import "fonts";

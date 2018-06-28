@@ -1,15 +1,17 @@
 .Page {
-  padding-bottom: 7rem;
-  padding-top: 7rem;
   &--images {
     background: url('./../images/bg-circle-small.png') 10% top no-repeat,
                 url('./../images/bg-circle-big.png') 0 bottom no-repeat;
     padding-bottom: 15rem;
+    padding-top: 7rem;
   }
   &--bg {
+    align-items: center;
     background: transparent url('./../images/bg-register.jpg') center top no-repeat;
     background-size: cover;
-    min-height: 100vh;
+    display: flex;
+    min-height: var(--height-page);
+    padding-top: var(--height-header);
   }
   &--bgcategories {
     background: transparent url('./../images/bg-categories.jpg') center top no-repeat;
@@ -21,12 +23,11 @@
   }
 }
 .Page__title {
-  color: $grey;
   font-family: 'Montserrat', sans-serif;
   font-size: 2.25em;
   font-weight: 700;
+  margin-bottom: 1.5rem;
   &--big {
-    color: $greyHard;
     font-size: 6.5em;
   }
   &--medium {

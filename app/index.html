@@ -4,8 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Forget</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -27,7 +25,7 @@
           <div class="carousel-caption Carousel__caption">
             <h5 class="text-uppercase Carousel__title">Lorem Ipsum</h5>
             <p class="Carousel__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi cum.</p>
-            <p class="text-uppercase Carousel__button">
+            <p class="text-uppercase Carousel__button text-center">
               <a href="#" class="btn Btn Btn--outline--red">ver más</a>
             </p>
           </div>
@@ -41,7 +39,7 @@
           <div class="carousel-caption Carousel__caption">
             <h5 class="text-uppercase Carousel__title">Lorem Ipsum</h5>
             <p class="Carousel__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi cum.</p>
-            <p class="text-uppercase Carousel__button">
+            <p class="text-uppercase Carousel__button text-center">
               <a href="#" class="btn Btn Btn--outline--red">ver más</a>
             </p>
           </div>
@@ -55,7 +53,7 @@
           <div class="carousel-caption Carousel__caption">
             <h5 class="text-uppercase Carousel__title">Lorem Ipsum</h5>
             <p class="Carousel__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi cum.</p>
-            <p class="text-uppercase Carousel__button">
+            <p class="text-uppercase Carousel__button text-center">
               <a href="#" class="btn Btn Btn--outline--red">ver más</a>
             </p>
           </div>
@@ -65,26 +63,14 @@
         </article>
       </div>
     </div>
-
     <aside class="Carousel__bottom">
-      <button class="Carousel__bottom--btn">
+      <button class="Carousel__bottom--btn GoBottom" data-href="#content">
         <i class="icon-mouse"></i>
       </button>
     </aside>
-
-    <!--
-    <a class="carousel-control-prev" href="#carouselHome" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselHome" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-      -->
   </div>
 
-  <section class="Page Page--images">
+  <section class="Page Page--images" id="content">
     <section class="container">
       <div class="row">
         <div class="col">
@@ -134,49 +120,14 @@
     </section>
   </section>
 
-  <section class="Page">
-    <section class="container">
-      <div class="row">
-        <div class="col-sm">
-          <h2 class="Page__title Page__title--big text-uppercase">¡Empieza ahora!</h2>
-        </div>
-        <div class="col-sm">
-          <form class="Form">
-            <div class="Form__group form-group row">
-              <label for="name" class="col-sm-2 col-form-label text-uppercase Form__label">Nombre</label>
-              <div class="col-sm-10">
-                <input type="text" class="form-control Form__input" id="name" placeholder="Nombre">
-              </div>
-            </div>
-            <div class="Form__group form-group row">
-              <label for="phone" class="col-sm-2 col-form-label text-uppercase Form__label">Teléfono</label>
-              <div class="col-sm-10">
-                <input type="text" class="form-control Form__input" id="phone" placeholder="Teléfono">
-              </div>
-            </div>
-            <div class="Form__group form-group row">
-              <label for="district" class="col-sm-2 col-form-label text-uppercase Form__label">Distrito</label>
-              <div class="col-sm-10">
-                <input type="text" class="form-control Form__input" id="district" placeholder="Distrito">
-              </div>
-            </div>
-            <div class="Form__group form-group row">
-              <div class="col-sm-12 text-center">
-                <button type="submit" class="text-uppercase btn Btn Btn--red Form__button">Ingresar</button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-    </section>
-  </section>
-
   <footer class="Footer">
     <section class="container">
       <div class="row">
         <div class="col-sm-3">
           <h3 class="Footer__logo">
-            <a href="#"><img src="images/logo-forget.png" alt="Forget"></a>
+            <a href="index.html">
+              <img src="images/logo-forget.png" alt="Forget" />
+            </a>
           </h3>
         </div>
         <div class="col-sm-6">
@@ -184,7 +135,7 @@
             <ul class="Footer__menu">
               <li class="Footer__menu__item text-uppercase"><a href="#">Sobre nosotros</a></li>
               <li class="Footer__menu__item text-uppercase"><a href="#">Proceso</a></li>
-              <li class="Footer__menu__item text-uppercase"><a href="#">Empieza ahora</a></li>
+              <li class="Footer__menu__item text-uppercase"><a href="register.html">Empieza ahora</a></li>
             </ul>
           </nav>
         </div>
@@ -206,8 +157,9 @@
     </section>
   </footer>
 
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <button class="ArrowTop"><i class="icon-keyboard_arrow_up"></i></button>
+
+  <script type="text/javascript" src="js/min/bundle.js"></script>
+  <script type="text/javascript" src="js/min/script.js"></script>
 </body>
 </html>

@@ -9,17 +9,17 @@
       height: 100%;
     }
     .Carousel__body {
-      @include display-flex();
-      @include align-content(center);
+      display: flex;
+      align-content: center;
       height: 100%;
     }
     .Carousel__caption, .Carousel__figure {
       width: 50%;
     }
     .Carousel__caption {
-      @include display-flex();
-      @include flex-wrap(wrap);
-      @include align-content(center);
+      display: flex;
+      flex-wrap: wrap;
+      align-content: center;
       bottom: auto;
       left: auto;
       padding: 0 0 0 13rem;
@@ -46,14 +46,14 @@
       font-family: 'Montserrat', sans-serif;
       font-size: 7em;
       font-weight: bold;
-      @include text-shadow(none);
+      text-shadow: none;
     }
     .Carousel__text {
       margin-bottom: 3rem;
     }
     .Carousel__figure {
-      @include display-flex();
-      @include justify-content(center);
+      display: flex;
+      justify-content: center;
       img {
         -o-object-fit: contain;
         object-fit: contain;
@@ -68,25 +68,27 @@
     .Carousel__bottom--btn {
       background-color: $greenSoft;
       border: none;
-      @include border-radius(50%);
+      border-radius: 50%;
       color: white;
       cursor: pointer;
       font-size: 1.5em;
       padding: .5em .8em;
-      @include transition(transform .3s ease-out);
+      transition: transform .3s ease-out;
+      transform: scale(1);
       &:focus, &:hover {
-        @include transform(scale(1.1));
+        transform: scale(1.1);
+        text-decoration: none;
       }
     }
     .Carousel__indicators {
-      @include align-items(center);
+      align-items: center;
       bottom: 80px;
       li {
-        @include border-radius(50%);
+        border-radius: 50%;
         cursor: pointer;
         height: 11px;
         width: 11px;
-        @include transition(width .2s ease, height .2s ease-in-out);
+        transition: width .2s ease, height .2s ease-in-out;
         &.active {
           height: 15px;
           width: 15px;

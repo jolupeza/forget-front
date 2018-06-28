@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,600');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Open+Sans:400,600');
 
 @font-face {
   font-family: 'icomoon';
-  src:  url('./../fonts/icomoon.eot?k08rvg');
-  src:  url('./../fonts/icomoon.eot?k08rvg#iefix') format('embedded-opentype'),
-    url('./../fonts/icomoon.ttf?k08rvg') format('truetype'),
-    url('./../fonts/icomoon.woff?k08rvg') format('woff'),
-    url('./../fonts/icomoon.svg?k08rvg#icomoon') format('svg');
+  src:  url('./../fonts/icomoon.eot?cvjs56');
+  src:  url('./../fonts/icomoon.eot?cvjs56#iefix') format('embedded-opentype'),
+    url('./../fonts/icomoon.ttf?cvjs56') format('truetype'),
+    url('./../fonts/icomoon.woff?cvjs56') format('woff'),
+    url('./../fonts/icomoon.svg?cvjs56#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -29,6 +29,9 @@
 .icon-cloud-upload:before {
   content: "\e901";
 }
+.icon-rotate:before {
+  content: "\e917";
+}
 .icon-mouse:before {
   content: "\e900";
 }
@@ -46,4 +49,43 @@
 }
 .icon-instagram:before {
   content: "\ea92";
+}
+.icon-close:before {
+  content: "\e91a";
+}
+.icon-keyboard_arrow_up:before {
+  content: "\e90b";
+}
+.icon-keyboard_arrow_right:before {
+  content: "\e90c";
+}
+.icon-keyboard_arrow_left:before {
+  content: "\e90d";
+}
+.icon-keyboard_arrow_down:before {
+  content: "\e90e";
+}
+.icon-arrow-down-left:before {
+  content: "\e902";
+}
+.icon-arrow-down-right:before {
+  content: "\e903";
+}
+.icon-arrow-up-left:before {
+  content: "\e904";
+}
+.icon-arrow-up-right:before {
+  content: "\e90a";
+}
+.icon-arrow-right:before {
+  content: "\e906";
+}
+.icon-arrow-left:before {
+  content: "\e907";
+}
+.icon-arrow-down:before {
+  content: "\e908";
+}
+.icon-arrow-up:before {
+  content: "\e909";
 }

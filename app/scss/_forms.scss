@@ -3,6 +3,11 @@
 }
 .Form__group {
   margin-bottom: 3rem;
+  .form-check-label {
+    color: $greyHard;
+    font-family: $montserrat;
+    font-weight: 300;
+  }
 }
 .Form__label {
   color: $greySoft;
@@ -11,19 +16,24 @@
   font-weight: 700;
 }
 .Form__input {
-  &[type="text"], &[type="email"] {
+  &[type="text"], &[type="email"], &[type="password"] {
     background-color: transparent;
     border: none;
     border-bottom: 1px solid $greySoft;
-    @include border-radius(0);
+    border-radius: 0;
     color: $greyHard;
     font-family: $opensans;
     font-weight: 600;
-    @include input-placeholder {
+    input-placeholder {
       color: $greySoft;
     }
     &:focus {
-      @include box-shadow(0 0 0 0.2rem rgba($grey, .25));
+      box-shadow: 0 0 0 0.2rem rgba($grey, .25);
     }
   }
+}
+.Form__options {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 3rem;
 }

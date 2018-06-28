@@ -1,9 +1,12 @@
 const gulp = require('gulp'),
-      compass = require('gulp-compass'),
+      sass = require('gulp-sass'),
+      autoprefixer = require('gulp-autoprefixer'),
       sourcemaps = require('gulp-sourcemaps'),
       cssnano = require('gulp-cssnano'),
+      purify = require('gulp-purifycss'),
       argv = require('yargs').argv,
       gulpIf = require('gulp-if'),
+      babel = require('gulp-babel'),
       concat = require('gulp-concat'),
       uglify = require('gulp-uglify'),
       imagemin = require('gulp-imagemin'),
@@ -27,33 +30,43 @@ let config = {
   imgDir: './app/images',
 };
 
+let autoprefixBrowsers = ['> 1%', 'last 2 versions', 'IE 9', 'IE 10', 'IE 11'];
+
 gulp.task('style', () => {
   return gulp.src(config.scssDir + '/*.scss')
-      //.pipe(sourcemaps.init())
-      .pipe(compass({
-        css: config.cssDir,
-        sass: config.scssDir,
-        image: config.imgDir,
-        sourcemap: true
+      .pipe(sourcemaps.init())
+      .pipe(sass())
+      .on('error', sass.logError)
+      .pipe(autoprefixer({
+        browsers: autoprefixBrowsers,
+        cascade: false
       }))
-      .on('error', function(error) {
-        console.log(error);
-        this.emit('end');
-      })
-      //.pipe(sourcemaps.write('../maps'))
+      .pipe(gulpIf(isProduction, cssnano(), sourcemaps.write('maps')))
       .pipe(gulp.dest(config.cssDir))
       .pipe(sync.stream())
 });
 
-//.pipe(gulpIf(isProduction, cssnano(), sourceMaps.write('maps')))
+gulp.task('css', () => {
+  return gulp.src(config.cssDir + '/style.css')
+    .pipe(purify([
+        config.jsDir + '/**/*.js',
+        config.template + '/*.html'
+      ]))
+    .pipe(gulpIf(isProduction, cssnano()))
+    .pipe(gulp.dest(config.cssDir + '/min/'))
+})
 
 gulp.task('concat', () => {
   return gulp.src([
-    config.jsDir + '/start.js',
+    //config.jsDir + '/start.js',
     config.jsDir + '/main.js',
-    config.jsDir + '/end.js'
   ])
+  .pipe(sourcemaps.init())
+  .pipe(babel({
+    presets: ['env']
+  }))
   .pipe(concat('script.js'))
+  .pipe(sourcemaps.write('.'))
   .pipe(gulp.dest(config.jsDir))
 });
 
@@ -85,21 +98,27 @@ gulp.task('browserify', () => {
     .pipe(gulp.dest(config.jsDir + '/min/'))
 });
 
+gulp.task('minifyjs', ['browserify'], () => {
+  return gulp.src(config.jsDir + '/min/bundle.js')
+    .pipe(uglify())
+    .on('error', console.error.bind(console))
+    .pipe(gulp.dest(config.jsDir + '/min/'));
+});
+
 gulp.task('js-sync', ['compress'], () => {
   sync.reload();
 });
 
-//gulp.task('browsersync', ['compress', 'style'], () =>
-gulp.task('browsersync', ['style'], () => {
+gulp.task('browsersync', ['compress', 'style'], () => {
   sync.init({
-    proxy: "forget-front.app",
-    browser: "chrome"
-    //browser: ["chrome", "firefox"]
+    proxy: "forget.front",
+    browser: "firefox"
+    //browser: ["chrome", "firefox", "google-chrome"]
   });
 
   gulp.watch([config.template + '/*.html', config.scssDir + '/**/*.scss']).on('change', sync.reload);
   gulp.watch(config.scssDir + '/**/*.scss', ['style']);
-  //gulp.watch(config.jsDir + '/*.js', ['js-sync']);
+  gulp.watch(config.jsDir + '/*.js', ['js-sync']);
 });
 
 //gulp.task('default', () => {

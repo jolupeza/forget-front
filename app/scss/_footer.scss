@@ -1,15 +1,15 @@
 .Footer {
   background-color: $whiteSoft;
-  padding: 3rem 0;
+  padding: 1.5rem 0;
 }
 .Footer__nav {
-  @include display-flex();
+  display: flex;
   height: 100%;
 }
 .Footer__menu {
-  @include display-flex();
-  @include justify-content(space-around);
-  @include align-items(center);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   list-style: none;
   margin-bottom: 0;
   padding-left: 0;
@@ -20,7 +20,7 @@
   font-weight: 700;
   a {
     color: $grey;
-    @include transition(color .4s ease-in);
+    transition: color .4s ease-in;
     &:focus, &:hover {
       color: $greyHard;
       text-decoration: none;
@@ -28,9 +28,9 @@
   }
 }
 .Footer__social {
-  @include display-flex();
-  @include justify-content(flex-end);
-  @include align-items(center);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
   height: 100%;
   list-style: none;
   margin-bottom: 0;
@@ -41,7 +41,7 @@
   margin-right: 10px;
   a {
     color: $grey;
-    @include transition(color .4s ease-in);
+    transition: color .4s ease-in;
     &:focus, &:hover {
       color: $greyHard;
       text-decoration: none;
