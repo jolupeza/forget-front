@@ -22,6 +22,14 @@
       color: white;
     }
   }
+  &--lightGreen {
+    background-color: $lightGreen;
+    color: white;
+    &:focus, &:hover {
+      background-color: $greenSoft;
+      color: white;
+    }
+  }
   &--red {
     background-color: $red;
     color: white;
