@@ -1,17 +1,31 @@
 .Btn {
   @include border-radius(24px);
   border: none;
+  display: inline-block;
   font-family: $montserrat;
   font-size: 1em;
   font-weight: 700;
   padding: .8rem 2.5rem;
   @include transition(background-color .3s ease, color .5s ease-out);
-  &--outline--red {
-    border: 2px solid $red;
-    color: $red;
-    &:focus, &:hover {
-      background-color: $red;
+  &--outline {
+    background-color: transparent;
+    border-style: solid;
+    border-width: 2px;
+    &--red {
+      border-color: $red;
+      color: $red;
+      &:focus, &:hover {
+        background-color: $red;
+        color: white;
+      }
+    }
+    &--white {
+      border-color: white;
       color: white;
+      &:focus, &:hover {
+        background-color: white;
+        color: $red;
+      }
     }
   }
   &--green {

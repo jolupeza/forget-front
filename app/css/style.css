@@ -9894,6 +9894,7 @@ a {
 .Btn {
   border-radius: 24px;
   border: none;
+  display: inline-block;
   font-family: "Montserrat", sans-serif;
   font-size: 1em;
   font-weight: 700;
@@ -9904,12 +9905,22 @@ a {
     .Btn {
       -webkit-transition: none;
       transition: none; } }
-  .Btn--outline--red {
-    border: 2px solid #d3473c;
-    color: #d3473c; }
-    .Btn--outline--red:focus, .Btn--outline--red:hover {
-      background-color: #d3473c;
+  .Btn--outline {
+    background-color: transparent;
+    border-style: solid;
+    border-width: 2px; }
+    .Btn--outline--red {
+      border-color: #d3473c;
+      color: #d3473c; }
+      .Btn--outline--red:focus, .Btn--outline--red:hover {
+        background-color: #d3473c;
+        color: white; }
+    .Btn--outline--white {
+      border-color: white;
       color: white; }
+      .Btn--outline--white:focus, .Btn--outline--white:hover {
+        background-color: white;
+        color: #d3473c; }
   .Btn--green {
     background-color: #00bd9c;
     color: white; }
@@ -10054,8 +10065,14 @@ a {
     padding-bottom: 15rem;
     padding-top: 7rem; }
   .Page--bg {
-    background: transparent url("./../images/bg-register.jpg") center top no-repeat;
+    background-color: transparent;
+    background-position: center top;
+    background-repeat: no-repeat;
     background-size: cover; }
+  .Page--register {
+    background-image: url("./../images/bg-register.jpg"); }
+  .Page--birthday {
+    background-image: url("./../images/bg-birthday.jpg"); }
   .Page--vh {
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -10070,7 +10087,7 @@ a {
   font-family: 'Montserrat', sans-serif;
   font-size: 2.25em;
   font-weight: 700;
-  margin-bottom: 1.5rem; }
+  margin-bottom: 2rem; }
   .Page__title--big {
     font-size: 6.5em; }
   .Page__title--medium {
@@ -10112,7 +10129,7 @@ a {
   font-size: 0.875em;
   font-weight: 700; }
 
-.Form__input[type="text"], .Form__input[type="email"], .Form__input[type="password"] {
+.Form__input {
   background-color: transparent;
   border: none;
   border-bottom: 1px solid #4f5050;
@@ -10120,9 +10137,9 @@ a {
   color: #2c2c2c;
   font-family: "Open Sans", sans-serif;
   font-weight: 600; }
-  .Form__input[type="text"] input-placeholder, .Form__input[type="email"] input-placeholder, .Form__input[type="password"] input-placeholder {
+  .Form__input input-placeholder {
     color: #4f5050; }
-  .Form__input[type="text"]:focus, .Form__input[type="email"]:focus, .Form__input[type="password"]:focus {
+  .Form__input:focus {
     -webkit-box-shadow: 0 0 0 0.2rem rgba(108, 108, 108, 0.25);
     box-shadow: 0 0 0 0.2rem rgba(108, 108, 108, 0.25); }
 

@@ -16,20 +16,18 @@
   font-weight: 700;
 }
 .Form__input {
-  &[type="text"], &[type="email"], &[type="password"] {
-    background-color: transparent;
-    border: none;
-    border-bottom: 1px solid $greySoft;
-    border-radius: 0;
-    color: $greyHard;
-    font-family: $opensans;
-    font-weight: 600;
-    input-placeholder {
-      color: $greySoft;
-    }
-    &:focus {
-      box-shadow: 0 0 0 0.2rem rgba($grey, .25);
-    }
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid $greySoft;
+  border-radius: 0;
+  color: $greyHard;
+  font-family: $opensans;
+  font-weight: 600;
+  input-placeholder {
+    color: $greySoft;
+  }
+  &:focus {
+    box-shadow: 0 0 0 0.2rem rgba($grey, .25);
   }
 }
 .Form__options {

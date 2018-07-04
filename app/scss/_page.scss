@@ -7,8 +7,16 @@
     padding-top: 7rem;
   }
   &--bg {
-    background: transparent url('./../images/bg-register.jpg') center top no-repeat;
+    background-color: transparent;
+    background-position: center top;
+    background-repeat: no-repeat;
     background-size: cover;
+  }
+  &--register {
+    background-image: url('./../images/bg-register.jpg');
+  }
+  &--birthday {
+    background-image: url('./../images/bg-birthday.jpg');
   }
   &--vh {
     align-items: center;
@@ -21,7 +29,7 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 2.25em;
   font-weight: 700;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   &--big {
     font-size: 6.5em;
   }
