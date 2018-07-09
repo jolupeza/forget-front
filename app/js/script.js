@@ -74,9 +74,11 @@
   };
 
   var heightPage = function heightPage() {
-    var hPage = hViewport() - getHFooter();
+    var hPage = hViewport() - getHFooter(),
+        hPageRow = hPage / 2;
 
     document.documentElement.style.setProperty('--height-page', hPage + 'px');
+    document.documentElement.style.setProperty('--height-page-row', hPageRow + 'px');
   };
 })(jQuery);
 //# sourceMappingURL=script.js.map
