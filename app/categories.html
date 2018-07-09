@@ -76,7 +76,11 @@
         </div>
       </div>
     </section>
-    <section class="Box__modal">
+    <section class="Box__modal active">
+      <button class="Box__modal__close">x</button>
+
+      <div class="alert alert-danger Box__modal__alert">¡Aquí se mostrará el mensaje de error!</div>
+
       <header class="Box__modal__header">
         <figure class="Box__modal__figure">
           <img class="img-fluid" src="images/computer.png" alt="Categoría 1" />
@@ -87,44 +91,28 @@
         </div>
       </header>
       <article class="Box__modal__body">
-        <ul class="Box__modal__list">
-          <li class="active">
-            <figure class="Box__modal__list__figure">
-              <i class="icon-heart"></i>
-            </figure>
-            <h3 class="Box__modal__list__title">Ejemplo Subcategoria 1</h3>
-          </li>
-          <li>
-            <figure class="Box__modal__list__figure">
-              <i class="icon-heart"></i>
-            </figure>
-            <h3 class="Box__modal__list__title">Ejemplo Subcategoria 2</h3>
-          </li>
-          <li>
-            <figure class="Box__modal__list__figure">
-              <i class="icon-heart"></i>
-            </figure>
-            <h3 class="Box__modal__list__title">Ejemplo Subcategoria 3</h3>
-          </li>
-          <li>
-            <figure class="Box__modal__list__figure">
-              <i class="icon-heart"></i>
-            </figure>
-            <h3 class="Box__modal__list__title">Ejemplo Subcategoria 4</h3>
-          </li>
-          <li>
-            <figure class="Box__modal__list__figure">
-              <i class="icon-heart"></i>
-            </figure>
-            <h3 class="Box__modal__list__title">Ejemplo Subcategoria 5</h3>
-          </li>
-          <li>
-            <figure class="Box__modal__list__figure">
-              <i class="icon-heart"></i>
-            </figure>
-            <h3 class="Box__modal__list__title">Ejemplo Subcategoria 6</h3>
-          </li>
-        </ul>
+        <form action="">
+          <div class="Box__modal__list">
+            <button class="Box__modal__button active">
+              <i class="icon-heart"></i> Ejemplo Subcategoria 1
+            </button>
+            <button class="Box__modal__button">
+              <i class="icon-heart"></i> Ejemplo Subcategoria 2
+            </button>
+            <button class="Box__modal__button">
+              <i class="icon-heart"></i> Ejemplo Subcategoria 3
+            </button>
+            <button class="Box__modal__button">
+              <i class="icon-heart"></i> Ejemplo Subcategoria 4
+            </button>
+            <button class="Box__modal__button">
+              <i class="icon-heart"></i> Ejemplo Subcategoria 5
+            </button>
+            <button class="Box__modal__button">
+              <i class="icon-heart"></i> Ejemplo Subcategoria 6
+            </button>
+          </div>
+        </form>
       </article>
     </section>
   </section>

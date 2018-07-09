@@ -7,7 +7,7 @@
 .Box__categories {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   margin: 0;
 }
 .Box__categories__item {
@@ -121,6 +121,18 @@
     transform: scale(1);
   }
 }
+.Box__modal__close {
+  background-color: #fff;
+  border: none;
+  border-radius: 50%;
+  color: $blue;
+  cursor: pointer;
+  font-size: 2rem;
+  padding: 0 .8rem;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
 .Box__modal__header {
   display: flex;
   margin-bottom: 2rem;
@@ -150,39 +162,31 @@
   justify-content: space-around;
   margin-bottom: 0;
   padding-left: 0;
-  li {
-    align-items: center;
-    background-color: rgba(white, .5);
-    border-radius: 3px;
-    cursor: pointer;
-    display: flex;
-    list-style: none;
-    margin-bottom: 2.5rem;
-    &.active {
-      background-color: #005a88;
-      .Box__modal__list__figure {
-        [class^="icon-"] {
-          color: white;
-        }
-      }
-      .Box__modal__list__title {
-        color: white;
-      }
+}
+.Box__modal__button {
+  align-items: center;
+  background-color: rgba(white, .5);
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  color: #005a88;
+  display: flex;
+  font-size: 1rem;
+  margin-bottom: 2.5rem;
+  padding: 0 .8rem;
+  [class^="icon-"] {
+    border-right: 1px solid white;
+    color: #005a88;
+    display: inline-block;
+    font-size: 1.5rem;
+    margin-right: .8rem;
+    padding: .8rem .8rem .8rem 0;
+  }
+  &.active {
+    background-color: #005a88;
+    color: white;
+    [class^="icon-"] {
+      color: white;
     }
   }
-}
-.Box__modal__list__figure {
-  border-right: 1px solid white;
-  margin-bottom: 0;
-  padding: .8rem;
-  [class^="icon-"] {
-    color: #005a88;
-    font-size: 1.5rem;
-  }
-}
-.Box__modal__list__title {
-  color: #005a88;
-  font-size: 1rem;
-  margin-bottom: 0;
-  padding: 0 .8rem;
 }

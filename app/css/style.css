@@ -10163,9 +10163,8 @@ a {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
   margin: 0; }
 
 .Box__categories__item {
@@ -10284,6 +10283,18 @@ a {
     -ms-transform: scale(1);
     transform: scale(1); }
 
+.Box__modal__close {
+  background-color: #fff;
+  border: none;
+  border-radius: 50%;
+  color: #1c4d6c;
+  cursor: pointer;
+  font-size: 2rem;
+  padding: 0 .8rem;
+  position: absolute;
+  right: 1rem;
+  top: 1rem; }
+
 .Box__modal__header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -10317,38 +10328,34 @@ a {
   justify-content: space-around;
   margin-bottom: 0;
   padding-left: 0; }
-  .Box__modal__list li {
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 3px;
-    cursor: pointer;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    list-style: none;
-    margin-bottom: 2.5rem; }
-    .Box__modal__list li.active {
-      background-color: #005a88; }
-      .Box__modal__list li.active .Box__modal__list__figure [class^="icon-"] {
-        color: white; }
-      .Box__modal__list li.active .Box__modal__list__title {
-        color: white; }
 
-.Box__modal__list__figure {
-  border-right: 1px solid white;
-  margin-bottom: 0;
-  padding: .8rem; }
-  .Box__modal__list__figure [class^="icon-"] {
-    color: #005a88;
-    font-size: 1.5rem; }
-
-.Box__modal__list__title {
+.Box__modal__button {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
   color: #005a88;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   font-size: 1rem;
-  margin-bottom: 0;
+  margin-bottom: 2.5rem;
   padding: 0 .8rem; }
+  .Box__modal__button [class^="icon-"] {
+    border-right: 1px solid white;
+    color: #005a88;
+    display: inline-block;
+    font-size: 1.5rem;
+    margin-right: .8rem;
+    padding: .8rem .8rem .8rem 0; }
+  .Box__modal__button.active {
+    background-color: #005a88;
+    color: white; }
+    .Box__modal__button.active [class^="icon-"] {
+      color: white; }
 
 .Footer {
   background-color: #f7f8f9;
