@@ -108,14 +108,14 @@
   border-radius: 5px;
   display: flex;
   flex-wrap: wrap;
-  height: 70%;
-  margin: 0 15%;
+  height: 90%;
+  margin: 0 5%;
   opacity: 0;
   padding: 2.5rem;
   position: absolute;
   transform: scale(0);
   transition: opacity .2s ease-out, transform .3s ease-in;
-  width: 70%;
+  width: 90%;
   &.active {
     opacity: 1;
     transform: scale(1);

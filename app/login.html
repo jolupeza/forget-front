@@ -25,17 +25,23 @@
 
       <div class="row justify-content-md-center">
         <div class="col-lg-8">
-          <form class="Form mt-3">
+          <form class="Form mt-3 mb-3">
             <div class="Form__group form-group row">
               <label for="name" class="col-sm-2 col-form-label text-uppercase Form__label">Nombre</label>
               <div class="col-sm-10">
-                <input type="text" class="form-control Form__input" id="name" />
+                <input type="text" class="form-control Form__input is-invalid" id="name" />
+                <div class="invalid-feedback">
+                  <strong>Aquí mostraremos el error</strong>
+                </div>
               </div>
             </div>
             <div class="Form__group form-group row">
               <label for="password" class="col-sm-2 col-form-label text-uppercase Form__label">Contraseña</label>
               <div class="col-sm-10">
-                <input type="password" class="form-control Form__input" id="password" />
+                <input type="password" class="form-control Form__input is-invalid" id="password" />
+                <div class="invalid-feedback">
+                  <strong>Aquí mostraremos el error</strong>
+                </div>
               </div>
             </div>
             <div class="text-center">
@@ -43,7 +49,7 @@
             </div>
             <div class="Form__options">
               <a href="#">¿Olvidaste tu contraseña?</a>
-              <a href="#">Ya estoy registrado</a>
+              <a href="register.html">Aún no estoy registrado</a>
             </div>
           </form>
         </div>

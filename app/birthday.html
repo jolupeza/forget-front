@@ -26,12 +26,15 @@
       <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At dicta velit libero placeat distinctio ex neque impedit nam ipsa architecto voluptate ducimus in, maiores sapiente quod animi quasi vitae omnis.</p>
 
       <div class="row justify-content-md-center">
-        <div class="col-lg-5">
-          <form class="Form mt-5">
+        <div class="col-lg-7 col-xl-5">
+          <form class="Form mt-4 mb-4">
             <div class="Form__group form-group row">
               <label for="birthday" class="col-md-4 col-form-label text-uppercase Form__label">Cumpleaños</label>
               <div class="col-md-6">
-                <input type="date" class="form-control Form__input" id="birthday" />
+                <input type="date" class="form-control Form__input is-invalid" id="birthday" />
+                <div class="invalid-feedback">
+                  <strong>Aquí mostraremos el error</strong>
+                </div>
               </div>
             </div>
             <div class="text-center">

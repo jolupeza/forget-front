@@ -27,11 +27,14 @@
     color: $greySoft;
   }
   &:focus {
-    box-shadow: 0 0 0 0.2rem rgba($grey, .25);
+    background-color: transparent;
   }
 }
 .Form__options {
   display: flex;
   justify-content: space-around;
-  margin-top: 3rem;
+  margin-top: 2rem;
+  @media screen and (max-width: 1400px) {
+    margin: 1.5rem 0;
+  }
 }
