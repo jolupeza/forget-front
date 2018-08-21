@@ -103,15 +103,15 @@
   width: 100%;
 }
 .Box__modal {
-  align-content: space-around;
   background-color: $skyBlue;
   border-radius: 5px;
+  box-shadow: 0 0 8px rgba(black, .6);
   display: flex;
   flex-wrap: wrap;
   height: 90%;
   margin: 0 5%;
   opacity: 0;
-  padding: 2.5rem;
+  padding: 2.5rem 20% 2.5rem;
   position: absolute;
   transform: scale(0);
   transition: opacity .2s ease-out, transform .3s ease-in;
@@ -120,38 +120,42 @@
     opacity: 1;
     transform: scale(1);
   }
+  @media screen and (max-width: 1199px) {
+    padding: 1.5rem;
+  }
 }
 .Box__modal__close {
-  background-color: #fff;
+  background-color: $red;
   border: none;
   border-radius: 50%;
-  color: $blue;
+  color: white;
   cursor: pointer;
   font-size: 2rem;
   padding: .3rem .6rem 0;
   position: absolute;
-  right: 1rem;
-  top: 1rem;
+  right: -1rem;
+  top: -1rem;
 }
 .Box__modal__header {
-  display: flex;
   margin-bottom: 2rem;
   width: 100%;
-}
-.Box__modal__figure {
-  margin-right: 2rem;
-}
-.Box__modal__info {
   p {
     color: white;
     font-family: $opensans;
     font-size: 1.25rem;
+    font-weight: 300;
   }
 }
 .Box__modal__title {
   color: white;
-  font-size: 3.25rem;
+  font-family: $montserrat;
+  font-size: 2.625rem;
   font-weight: 700;
+  margin-bottom: 2rem;
+}
+.Box__modal__alert {
+  margin: 0 auto 1.5rem;
+  width: 70%;
 }
 .Box__modal__body {
   width: 100%;
@@ -163,30 +167,62 @@
   margin-bottom: 0;
   padding-left: 0;
 }
+.Box__modal__item {
+  margin-bottom: 2.5rem;
+  width: 30%;
+}
 .Box__modal__button {
-  align-items: center;
-  background-color: rgba(white, .5);
+  background-color: #fff;
   border: none;
-  border-radius: 3px;
+  border-radius: 50%;
   cursor: pointer;
   color: #005a88;
-  display: flex;
-  font-size: 1rem;
-  margin-bottom: 2.5rem;
-  padding: 0 .8rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  position: relative;
   [class^="icon-"] {
-    border-right: 1px solid white;
-    color: #005a88;
-    display: inline-block;
-    font-size: 1.5rem;
-    margin-right: .8rem;
-    padding: .8rem .8rem .8rem 0;
+    color: #ccc;
+    display: block;
+    font-size: 5rem;
+    transition: color .2s ease-out;
+  }
+  &.active, &:hover {
+    [class^="icon-"] {
+      color: #61d6d2;
+    }
   }
   &.active {
-    background-color: #005a88;
-    color: white;
-    [class^="icon-"] {
-      color: white;
+    &::after {
+      display: block;
     }
+  }
+  &::after {
+    background-color: #61d6d2;
+    border-radius: 50%;
+    color: white;
+    content: "\e913";
+    display: none;
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    padding: .2rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+.Box__modal__button__title {
+  color: white;
+  font: {
+    family: $montserrat;
+    weight: bold;
+    size: .875rem;
   }
 }

@@ -112,7 +112,7 @@ gulp.task('js-sync', ['compress'], () => {
 gulp.task('browsersync', ['compress', 'style'], () => {
   sync.init({
     proxy: "forget.front",
-    browser: "google-chrome"
+    browser: "chrome"
     //browser: ["chrome", "firefox", "google-chrome"]
   });
 

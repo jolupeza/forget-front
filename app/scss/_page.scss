@@ -25,6 +25,7 @@
     padding-top: var(--height-header);
   }
   &--flex {
+    align-items: normal;
     display: flex;
     flex-wrap: wrap;
     padding-top: 0;
@@ -32,7 +33,6 @@
 }
 .Page__row {
   display: flex;
-  min-height: var(--height-page-row);
 }
 .Page__child {
   display: flex;
@@ -51,34 +51,45 @@
   &--red {
     background-color: $red;
   }
-  &--share {
-    background-image: url('./../images/bg-share.png');
-    background-position: 0 center;
+  &--bg {
     background-repeat: no-repeat;
-    background-size: 30%;
+    background-size: contain;
+    @media screen and (max-width: 1300px) {
+      background-size: cover;
+    }
+  }
+  &--gratitude {
+    background-image: url('./../images/bg-gratitude.jpg');
+  }
+  &--share {
+    background-image: url('./../images/bg-share.jpg');
   }
   &--otherDates {
-    background-image: url('./../images/bg-other-dates.png');
+    background-image: url('./../images/bg-other-dates.jpg');
+  }
+  @media screen and (max-width: 1450px) {
+    padding-bottom: 3rem;
+  }
+}
+.Page__child--50.Page__child--bg {
+  @media screen and (max-width: 1199px) {
     background-position: 0 center;
-    background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 95%;
   }
-}
-.Page__child__figure {
-  margin-bottom: 0;
-  &--gratitude {
-    background: transparent url('./../images/bg-gratitude.jpg') 0 0 no-repeat;
-    background-size: contain;
-  }
-}
-.Page__child__figure, .Page__child__body {
-  width: 50%;
 }
 .Page__child__body {
   padding: 0 5rem;
+  padding-top: var(--height-header);
+  width: 50%;
+}
+.Page__child__body {
 }
 .Page__child__content {
   padding: 0 3rem 0 40%;
+  width: 100%;
+  @media screen and (max-width: 1450px) {
+    padding: 3rem 3rem 3rem 35%;
+  }
 }
 .Page__title {
   font-family: $montserrat;
@@ -90,6 +101,16 @@
   }
   &--medium {
     font-size: 3em;
+  }
+}
+.Page__bigTitle {
+  font-family: $montserrat;
+  font-size: 3.75rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  @media screen and (max-width: 1199px) {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
   }
 }
 .Page__subtitle {

@@ -74,10 +74,8 @@
   }
 
   let heightPage = () => {
-    let hPage = hViewport() - getHFooter(),
-        hPageRow = hPage / 2;
+    let hPage = hViewport() - getHFooter();
 
     document.documentElement.style.setProperty('--height-page', `${hPage}px`);
-    document.documentElement.style.setProperty('--height-page-row', `${hPageRow}px`);
   }
 })(jQuery);
