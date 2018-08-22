@@ -33,6 +33,9 @@
 }
 .Page__row {
   display: flex;
+  @media screen and (max-width: 991px) {
+    flex-wrap: wrap;
+  }
 }
 .Page__child {
   display: flex;
@@ -41,6 +44,9 @@
   }
   &--50 {
     width: 50%;
+    @media screen and (max-width: 991px) {
+      width: 100%;
+    }
   }
   &--skyBlue {
     background-color: $skyBlueLight;
@@ -76,13 +82,25 @@
     background-position: 0 center;
     background-size: 95%;
   }
+  @media screen and (max-width: 991px) {
+    background-position: 0 bottom;
+    background-size: contain;
+  }
 }
 .Page__child__body {
   padding: 0 5rem;
   padding-top: var(--height-header);
   width: 50%;
-}
-.Page__child__body {
+  @media screen and (max-width: 991px) {
+    padding: 0 1.5rem;
+    padding-top: var(--height-header);
+    width: 100%;
+  }
+  p {
+    @media screen and (max-width: 991px) {
+      text-shadow: 1px 1px 3px rgba(white, 1);
+    }
+  }
 }
 .Page__child__content {
   padding: 0 3rem 0 40%;
@@ -90,17 +108,26 @@
   @media screen and (max-width: 1450px) {
     padding: 3rem 3rem 3rem 35%;
   }
+  @media screen and (max-width: 767px) and (orientation: portrait) {
+    padding: 3rem 1rem 3rem 3rem;
+  }
 }
 .Page__title {
   font-family: $montserrat;
-  font-size: 2.25em;
+  font-size: 2.25rem;
   font-weight: 700;
   margin-bottom: 2rem;
+  @media screen and (max-width: 991px) {
+    font-size: 1.625rem;
+  }
   &--big {
-    font-size: 6.5em;
+    font-size: 6.5rem;
   }
   &--medium {
-    font-size: 3em;
+    font-size: 3rem;
+    @media screen and (max-width: 991px) {
+      font-size: 1.625rem;
+    }
   }
 }
 .Page__bigTitle {
@@ -111,6 +138,9 @@
   @media screen and (max-width: 1199px) {
     font-size: 3rem;
     margin-bottom: 1.5rem;
+  }
+  @media screen and (max-width: 767px) {
+    font-size: 2rem;
   }
 }
 .Page__subtitle {

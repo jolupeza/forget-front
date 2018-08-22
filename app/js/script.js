@@ -42,6 +42,11 @@
   var checkScroll = function checkScroll() {
     var arrow = $('.ArrowTop');
 
+    if (wViewport() < 992) {
+      arrow.fadeOut();
+      return;
+    }
+
     if ($window.scrollTop() > 150) {
       arrow.fadeIn();
     } else {
@@ -51,6 +56,10 @@
 
   var hViewport = function hViewport() {
     return Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+  };
+
+  var wViewport = function wViewport() {
+    return Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
   };
 
   var getHFooter = function getHFooter() {

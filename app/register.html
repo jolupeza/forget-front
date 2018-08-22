@@ -8,11 +8,13 @@
 </head>
 <body>
   <header class="Header">
-    <h1 class="text-center Header__logo">
-      <a href="index.html">
-        <img src="images/logo-forget.png" alt="Forget" class="img-fluid" />
-      </a>
-    </h1>
+    <div class="container-fluid">
+      <h1 class="text-center Header__logo">
+        <a href="index.html">
+          <img src="images/logo-forget.png" alt="Forget" class="img-fluid" />
+        </a>
+      </h1>
+    </div>
   </header>
 
   <section class="Page Page--vh Page--bg Page--register">
@@ -27,8 +29,8 @@
         <div class="col-lg-8">
           <form class="Form mt-3 mb-3">
             <div class="Form__group form-group row">
-              <label for="name" class="col-sm-2 col-form-label text-uppercase Form__label">Nombre</label>
-              <div class="col-sm-10">
+              <label for="name" class="col-md-2 col-form-label text-uppercase Form__label">Nombre</label>
+              <div class="col-md-10">
                 <input type="text" class="form-control Form__input is-invalid" id="name" autocomplete="off" />
                 <div class="invalid-feedback">
                   <strong>Aquí mostraremos el error</strong>
@@ -36,8 +38,8 @@
               </div>
             </div>
             <div class="Form__group form-group row">
-              <label for="phone" class="col-sm-2 col-form-label text-uppercase Form__label">Teléfono</label>
-              <div class="col-sm-10">
+              <label for="phone" class="col-md-2 col-form-label text-uppercase Form__label">Teléfono</label>
+              <div class="col-md-10">
                 <input type="text" class="form-control Form__input is-invalid" id="phone" autocomplete="off" />
                 <div class="invalid-feedback">
                   <strong>Aquí mostraremos el error</strong>
@@ -45,8 +47,8 @@
               </div>
             </div>
             <div class="Form__group form-group row">
-              <label for="district" class="col-sm-2 col-form-label text-uppercase Form__label">Distrito</label>
-              <div class="col-sm-10">
+              <label for="district" class="col-md-2 col-form-label text-uppercase Form__label">Distrito</label>
+              <div class="col-md-10">
                 <input type="text" class="form-control Form__input is-invalid" id="district" autocomplete="off" />
                 <div class="invalid-feedback">
                   <strong>Aquí mostraremos el error</strong>
@@ -54,8 +56,8 @@
               </div>
             </div>
             <div class="Form__group form-group row">
-              <label for="password" class="col-sm-2 col-form-label text-uppercase Form__label">Contraseña</label>
-              <div class="col-sm-10">
+              <label for="password" class="col-md-2 col-form-label text-uppercase Form__label">Contraseña</label>
+              <div class="col-md-10">
                 <input type="password" class="form-control Form__input is-invalid" id="password" />
                 <div class="invalid-feedback">
                   <strong>Aquí mostraremos el error</strong>
@@ -84,14 +86,14 @@
   <footer class="Footer">
     <section class="container">
       <div class="row">
-        <div class="col-lg-3">
+        <div class="col-6 col-lg-3 order-1 order-lg-1">
           <h3 class="Footer__logo text-center">
             <a href="index.html">
-              <img src="images/logo-forget.png" alt="Forget" />
+              <img class="img-fluid" src="images/logo-forget.png" alt="Forget" />
             </a>
           </h3>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-6 order-3 order-lg-2">
           <nav class="Footer__nav">
             <ul class="Footer__menu">
               <li class="Footer__menu__item text-uppercase"><a href="#">Sobre nosotros</a></li>
@@ -100,7 +102,7 @@
             </ul>
           </nav>
         </div>
-        <div class="col-lg-3">
+        <div class="col-6 col-lg-3 order-2 order-lg-3">
           <ul class="Footer__social">
             <li class="Footer__social__item">
               <a href="#">

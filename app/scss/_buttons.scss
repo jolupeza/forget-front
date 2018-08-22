@@ -57,6 +57,9 @@
     border-radius: 5px;
     color: white;
     font-size: 1.25rem;
+    @media screen and (max-width: 767px) {
+      font-size: .875rem;
+    }
     &:focus, &:hover {
       background-color: lighten($blueFb, 5%);
       color: white;

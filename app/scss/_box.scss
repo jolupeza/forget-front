@@ -13,6 +13,18 @@
 .Box__categories__item {
   margin-bottom: 1.5rem;
   width: 23%;
+  @media screen and (max-width: 991px) {
+    width: 42%;
+  }
+  @media screen and (max-width: 767px) and (orientation: portrait) {
+    margin-bottom: 0;
+    width: 100%;
+  }
+  &:last-child {
+    @media screen and (max-width: 767px) and (orientation: portrait) {
+      margin-bottom: 2rem;
+    }
+  }
 }
 .Box__categories__figure {
   align-items: center;
@@ -24,6 +36,13 @@
   opacity: 1;
   position: relative;
   transition: opacity .2s ease-in;
+  @media screen and (max-width: 767px) {
+    height: 10rem;
+  }
+  @media screen and (max-width: 767px) and (orientation: portrait) {
+    border-radius: 0;
+    height: 7rem;
+  }
   &::before {
     background-color: transparent;
     background-position: center center;
@@ -99,8 +118,16 @@
   font-family: $montserrat;
   font-size: 1.5rem;
   font-weight: 700;
+  text-align: center;
   text-transform: uppercase;
   width: 100%;
+  @media screen and (max-width: 991px) {
+    font-size: 1.125rem;
+  }
+  @media screen and (max-width: 767px) and (orientation: portrait) {
+    padding-left: 1rem;
+    text-align: left;
+  }
 }
 .Box__modal {
   background-color: $skyBlue;
@@ -124,6 +151,15 @@
   @media screen and (max-width: 1199px) {
     padding: 1.5rem;
   }
+  @media screen and (max-width: 991px) {
+    align-self: flex-start;
+    height: auto;
+  }
+  @media screen and (max-width: 767px) {
+    border-radius: 0;
+    margin: 0;
+    width: 100%;
+  }
 }
 .Box__modal__close {
   background-color: $red;
@@ -137,6 +173,10 @@
   right: -1rem;
   top: -1rem;
   z-index: 999;
+  @media screen and (max-width: 767px) {
+    right: 0;
+    top: -1.5rem;
+  }
 }
 .Box__modal__header {
   margin-bottom: 2rem;
@@ -154,10 +194,19 @@
   font-size: 2.625rem;
   font-weight: 700;
   margin-bottom: 2rem;
+  @media screen and (max-width: 991px) {
+    font-size: 2rem;
+  }
+  @media screen and (max-width: 767px) {
+    font-size: 1.5rem;
+  }
 }
 .Box__modal__alert {
   margin: 0 auto 1.5rem;
   width: 70%;
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
 }
 .Box__modal__body {
   width: 100%;
@@ -172,6 +221,9 @@
 .Box__modal__item {
   margin-bottom: 2.5rem;
   width: 30%;
+  @media screen and (max-width: 767px) {
+    width: 42%;
+  }
 }
 .Box__modal__button {
   background-color: #fff;

@@ -8,9 +8,11 @@
 </head>
 <body>
   <header class="Header">
-    <h1 class="text-center Header__logo">
-      <a href="index.html"><img src="images/logo-forget.png" alt="Forget" class="img-fluid" /></a>
-    </h1>
+    <div class="container-fluid">
+      <h1 class="text-center Header__logo">
+        <a href="index.html"><img src="images/logo-forget.png" alt="Forget" class="img-fluid" /></a>
+      </h1>
+    </div>
   </header>
 
   <section class="Page Page--vh Page--flex">
@@ -45,14 +47,14 @@
   <footer class="Footer">
     <section class="container">
       <div class="row">
-        <div class="col-lg-3">
+        <div class="col-6 col-lg-3 order-1 order-lg-1">
           <h3 class="Footer__logo text-center">
             <a href="index.html">
-              <img src="images/logo-forget.png" alt="Forget" />
+              <img class="img-fluid" src="images/logo-forget.png" alt="Forget" />
             </a>
           </h3>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-6 order-3 order-lg-2">
           <nav class="Footer__nav">
             <ul class="Footer__menu">
               <li class="Footer__menu__item text-uppercase"><a href="#">Sobre nosotros</a></li>
@@ -61,7 +63,7 @@
             </ul>
           </nav>
         </div>
-        <div class="col-lg-3">
+        <div class="col-6 col-lg-3 order-2 order-lg-3">
           <ul class="Footer__social">
             <li class="Footer__social__item">
               <a href="#">

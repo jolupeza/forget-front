@@ -5,4 +5,16 @@
   top: 0;
   width: 100%;
   z-index: 9;
+  @media screen and (max-width: 991px) {
+    padding: .8rem 0;
+  }
+}
+.Header__logo {
+  text-align: center;
+  @media screen and (max-width: 767px) and (orientation: landscape) {
+    text-align: right;
+  }
+  a {
+    display: block;
+  }
 }

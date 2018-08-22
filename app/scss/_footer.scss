@@ -2,9 +2,21 @@
   background-color: $whiteSoft;
   padding: 1.5rem 0;
 }
+.Footer__logo {
+  text-align: center;
+  a {
+    display: block;
+  }
+  @media screen and (max-width: 991px) {
+    text-align: left;
+  }
+}
 .Footer__nav {
   display: flex;
   height: 100%;
+  @media screen and (max-width: 991px) {
+    margin-top: 1rem;
+  }
 }
 .Footer__menu {
   display: flex;
@@ -14,12 +26,23 @@
   margin-bottom: 0;
   padding-left: 0;
   width: 100%;
+  @media screen and (max-width: 767px) {
+    justify-content: space-between;
+  }
 }
 .Footer__menu__item {
   font-family: $montserrat;
   font-weight: 700;
+  @media screen and (max-width: 991px) {
+    font-size: .875rem;
+  }
+  @media screen and (max-width: 767px) {
+    flex: 0 1;
+    text-align: center;
+  }
   a {
     color: $grey;
+    display: block;
     transition: color .4s ease-in;
     &:focus, &:hover {
       color: $greyHard;
@@ -35,15 +58,20 @@
   list-style: none;
   margin-bottom: 0;
   padding-left: 0;
-  @media screen and (max-width: 991px) {
-    justify-content: center;
-  }
 }
 .Footer__social__item {
-  font-size: 1.5em;
+  font-size: 1.5rem;
   margin-right: 10px;
+  @media screen and (max-width: 991px) {
+    font-size: 2rem;
+    margin-right: 1em;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
   a {
     color: $grey;
+    display: block;
     transition: color .4s ease-in;
     &:focus, &:hover {
       color: $greyHard;
