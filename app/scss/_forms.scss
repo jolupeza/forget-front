@@ -29,6 +29,11 @@
   &:focus {
     background-color: transparent;
   }
+  &--date {
+    &[readonly] {
+      background-color: transparent;
+    }
+  }
 }
 .Form__options {
   display: flex;
@@ -45,5 +50,16 @@
       text-align: center;
       width: 100%;
     }
+  }
+}
+.vdp-datepicker {
+  .input-group-text {
+    background-color: transparent;
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid $greySoft;
+  }
+  .vdp-datepicker__calendar-button {
+    order: 1;
   }
 }

@@ -10367,6 +10367,8 @@ a {
     color: #4f5050; }
   .Form__input:focus {
     background-color: transparent; }
+  .Form__input--date[readonly] {
+    background-color: transparent; }
 
 .Form__options {
   display: -webkit-box;
@@ -10389,6 +10391,17 @@ a {
         margin-bottom: 1rem;
         text-align: center;
         width: 100%; } }
+
+.vdp-datepicker .input-group-text {
+  background-color: transparent;
+  border-radius: 0;
+  border: none;
+  border-bottom: 1px solid #4f5050; }
+
+.vdp-datepicker .vdp-datepicker__calendar-button {
+  -webkit-box-ordinal-group: 2;
+  -ms-flex-order: 1;
+  order: 1; }
 
 .Box {
   background-color: rgba(255, 255, 255, 0.77);
