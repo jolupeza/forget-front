@@ -9946,7 +9946,7 @@ a {
       background-color: #0ad5b2;
       color: white; }
   .Btn--lightGreen {
-    background-color: #5ccf8c;
+    background-color: #4fd393;
     color: white; }
     .Btn--lightGreen:focus, .Btn--lightGreen:hover {
       background-color: #0ad5b2;
@@ -10182,7 +10182,8 @@ a {
 .Page__child {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  padding-bottom: 2rem; }
   .Page__child--full {
     width: 100%; }
   .Page__child--50 {
@@ -10222,6 +10223,15 @@ a {
     background-position: 0 bottom;
     background-size: contain; } }
 
+.Page__child--50.Page__child--bg .Page__child__content {
+  padding: 0 3rem 0 40%; }
+  @media screen and (max-width: 1450px) {
+    .Page__child--50.Page__child--bg .Page__child__content {
+      padding: 3rem 3rem 3rem 35%; } }
+  @media screen and (max-width: 767px) and (orientation: portrait) {
+    .Page__child--50.Page__child--bg .Page__child__content {
+      padding: 3rem 1rem 3rem 3rem; } }
+
 .Page__child__body {
   padding: 0 5rem;
   padding-top: var(--height-header);
@@ -10236,14 +10246,8 @@ a {
       text-shadow: 1px 1px 3px white; } }
 
 .Page__child__content {
-  padding: 0 3rem 0 40%;
+  padding: 2rem;
   width: 100%; }
-  @media screen and (max-width: 1450px) {
-    .Page__child__content {
-      padding: 3rem 3rem 3rem 35%; } }
-  @media screen and (max-width: 767px) and (orientation: portrait) {
-    .Page__child__content {
-      padding: 3rem 1rem 3rem 3rem; } }
 
 .Page__title {
   font-family: "Montserrat", sans-serif;
@@ -10444,11 +10448,11 @@ a {
     .Box__categories__figure--skyBlue::before {
       background-image: url("./../images/fondo.jpg"); }
   .Box__categories__figure--skyBlueHard {
-    background-color: #51b9bc; }
+    background-color: #4fabd3; }
     .Box__categories__figure--skyBlueHard::before {
       background-image: url("./../images/fondo.jpg"); }
   .Box__categories__figure--lightGreen {
-    background-color: #5ccf8c; }
+    background-color: #4fd393; }
     .Box__categories__figure--lightGreen::before {
       background-image: url("./../images/fondo.jpg"); }
   .Box__categories__figure--yellow {
@@ -10647,6 +10651,64 @@ a {
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
   font-size: .875rem; }
+
+.Reminders__list {
+  margin: 0 auto;
+  padding-left: 0;
+  width: 50%; }
+
+.Reminders__list__item {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 0 .3rem .3rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.375rem;
+  height: 85px;
+  list-style: none;
+  margin-bottom: 2rem;
+  padding-left: 4rem;
+  position: relative;
+  -webkit-transition: background-color .2s ease-in;
+  transition: background-color .2s ease-in; }
+  .Reminders__list__item--skyBlue {
+    background-color: #3b83c6; }
+  .Reminders__list__item--lightGreen {
+    background-color: #4fd393; }
+  .Reminders__list__item--skyBlueHard {
+    background-color: #4fabd3; }
+  .Reminders__list__item--purple {
+    background-color: #a084cb; }
+  .Reminders__list__item:hover {
+    background-color: #86b7ca; }
+  .Reminders__list__item::before {
+    background-color: white;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    content: "";
+    display: inline-block;
+    height: 85px;
+    left: -42px;
+    position: absolute;
+    top: 0;
+    width: 85px; }
+  .Reminders__list__item.icon--aniversario::before {
+    background-image: url("./../images/icon-aniversary.png"); }
+  .Reminders__list__item.icon--cumpleanos::before {
+    background-image: url("./../images/icon-other-birthday.png"); }
+  .Reminders__list__item.icon--feriado::before {
+    background-image: url("./../images/icon-holiday.png"); }
+  .Reminders__list__item.icon--fecha-especial::before {
+    background-image: url("./../images/icon-especial-date.png"); }
+  .Reminders__list__item a {
+    color: white;
+    display: block;
+    font-family: "Montserrat", sans-serif; }
+    .Reminders__list__item a:hover {
+      text-decoration: none; }
 
 .Footer {
   background-color: #f7f8f9;

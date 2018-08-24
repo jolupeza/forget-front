@@ -40,6 +40,7 @@
 }
 .Page__child {
   display: flex;
+  padding-bottom: 2rem;
   &--full {
     width: 100%;
   }
@@ -87,6 +88,15 @@
     background-position: 0 bottom;
     background-size: contain;
   }
+  .Page__child__content {
+    padding: 0 3rem 0 40%;
+    @media screen and (max-width: 1450px) {
+      padding: 3rem 3rem 3rem 35%;
+    }
+    @media screen and (max-width: 767px) and (orientation: portrait) {
+      padding: 3rem 1rem 3rem 3rem;
+    }
+  }
 }
 .Page__child__body {
   padding: 0 5rem;
@@ -104,14 +114,8 @@
   }
 }
 .Page__child__content {
-  padding: 0 3rem 0 40%;
+  padding: 2rem;
   width: 100%;
-  @media screen and (max-width: 1450px) {
-    padding: 3rem 3rem 3rem 35%;
-  }
-  @media screen and (max-width: 767px) and (orientation: portrait) {
-    padding: 3rem 1rem 3rem 3rem;
-  }
 }
 .Page__title {
   font-family: $montserrat;
