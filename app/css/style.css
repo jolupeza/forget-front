@@ -10183,7 +10183,9 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-bottom: 2rem; }
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  position: relative; }
   .Page__child--full {
     width: 100%; }
   .Page__child--50 {
@@ -10209,9 +10211,6 @@ a {
     background-image: url("./../images/bg-share.jpg"); }
   .Page__child--otherDates {
     background-image: url("./../images/bg-other-dates.jpg"); }
-  @media screen and (max-width: 1450px) {
-    .Page__child {
-      padding-bottom: 3rem; } }
 
 @media screen and (max-width: 1199px) {
   .Page__child--50.Page__child--bg {
@@ -10223,19 +10222,17 @@ a {
     background-position: 0 bottom;
     background-size: contain; } }
 
-.Page__child--50.Page__child--bg .Page__child__content {
-  padding: 0 3rem 0 40%; }
-  @media screen and (max-width: 1450px) {
-    .Page__child--50.Page__child--bg .Page__child__content {
-      padding: 3rem 3rem 3rem 35%; } }
-  @media screen and (max-width: 767px) and (orientation: portrait) {
-    .Page__child--50.Page__child--bg .Page__child__content {
-      padding: 3rem 1rem 3rem 3rem; } }
+@media screen and (max-width: 767px) and (orientation: portrait) {
+  .Page__child--50.Page__child--bg {
+    background-size: 70%; } }
 
 .Page__child__body {
-  padding: 0 5rem;
+  padding: 0 5rem 1.5rem 0;
   padding-top: var(--height-header);
   width: 50%; }
+  @media screen and (max-width: 1450px) {
+    .Page__child__body {
+      padding-bottom: 3rem; } }
   @media screen and (max-width: 991px) {
     .Page__child__body {
       padding: 0 1.5rem;
@@ -10246,8 +10243,46 @@ a {
       text-shadow: 1px 1px 3px white; } }
 
 .Page__child__content {
-  padding: 2rem;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  height: 100%;
+  left: 0;
+  padding: 1.5rem 3rem 0 40%;
+  position: relative;
+  top: 0;
+  -webkit-transition: position .2s ease, -webkit-transform .5s ease-in, -webkit-backface-visibility .3s ease-out;
+  transition: position .2s ease, -webkit-transform .5s ease-in, -webkit-backface-visibility .3s ease-out;
+  transition: transform .5s ease-in, backface-visibility .3s ease-out, position .2s ease;
+  transition: transform .5s ease-in, backface-visibility .3s ease-out, position .2s ease, -webkit-transform .5s ease-in, -webkit-backface-visibility .3s ease-out;
+  -webkit-transform: rotateY(0);
+  transform: rotateY(0);
   width: 100%; }
+  @media screen and (max-width: 991px) {
+    .Page__child__content {
+      padding: 2rem 2rem 0 30%; } }
+  .Page__child__content--noPadding {
+    padding: 1.5rem 0 0; }
+    @media screen and (max-width: 767px) {
+      .Page__child__content--noPadding {
+        padding: 1.5rem; } }
+  .Page__child__content .Page__title, .Page__child__content p {
+    width: 100%; }
+  .Page__child__content.hide {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    position: absolute; }
 
 .Page__title {
   font-family: "Montserrat", sans-serif;
@@ -10653,9 +10688,14 @@ a {
   font-size: .875rem; }
 
 .Reminders__list {
-  margin: 0 auto;
   padding-left: 0;
   width: 50%; }
+  @media screen and (max-width: 1199px) {
+    .Reminders__list {
+      width: auto; } }
+  @media screen and (max-width: 767px) {
+    .Reminders__list {
+      padding-left: 2rem; } }
 
 .Reminders__list__item {
   -webkit-box-align: center;
@@ -10671,6 +10711,7 @@ a {
   list-style: none;
   margin-bottom: 2rem;
   padding-left: 4rem;
+  padding-right: 1rem;
   position: relative;
   -webkit-transition: background-color .2s ease-in;
   transition: background-color .2s ease-in; }

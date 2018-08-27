@@ -37,6 +37,17 @@
         scrollTop: 0
       }, 800);
     });
+
+    $('#js-display-reminders').on('click', function () {
+      var button = $(this),
+          parentWrapper = button.closest('.Page__child__content'),
+          reminderWrapper = parentWrapper.next(),
+          parentRow = parentWrapper.parent();
+
+      parentRow.removeClass('Page__child--otherDates');
+      parentWrapper.addClass('hide');
+      reminderWrapper.removeClass('hide');
+    });
   });
 
   var checkScroll = function checkScroll() {

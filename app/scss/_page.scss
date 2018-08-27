@@ -40,7 +40,8 @@
 }
 .Page__child {
   display: flex;
-  padding-bottom: 2rem;
+  flex-wrap: wrap;
+  position: relative;
   &--full {
     width: 100%;
   }
@@ -75,9 +76,6 @@
   &--otherDates {
     background-image: url('./../images/bg-other-dates.jpg');
   }
-  @media screen and (max-width: 1450px) {
-    padding-bottom: 3rem;
-  }
 }
 .Page__child--50.Page__child--bg {
   @media screen and (max-width: 1199px) {
@@ -88,20 +86,17 @@
     background-position: 0 bottom;
     background-size: contain;
   }
-  .Page__child__content {
-    padding: 0 3rem 0 40%;
-    @media screen and (max-width: 1450px) {
-      padding: 3rem 3rem 3rem 35%;
-    }
-    @media screen and (max-width: 767px) and (orientation: portrait) {
-      padding: 3rem 1rem 3rem 3rem;
-    }
+  @media screen and (max-width: 767px) and (orientation: portrait) {
+    background-size: 70%;
   }
 }
 .Page__child__body {
-  padding: 0 5rem;
+  padding: 0 5rem 1.5rem 0;
   padding-top: var(--height-header);
   width: 50%;
+  @media screen and (max-width: 1450px) {
+    padding-bottom: 3rem;
+  }
   @media screen and (max-width: 991px) {
     padding: 0 1.5rem;
     padding-top: var(--height-header);
@@ -114,8 +109,36 @@
   }
 }
 .Page__child__content {
-  padding: 2rem;
+  align-content: center;
+  backface-visibility: visible;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 100%;
+  left: 0;
+  padding: 1.5rem 3rem 0 40%;
+  position: relative;
+  top: 0;
+  transition: transform .5s ease-in, backface-visibility .3s ease-out, position .2s ease;
+  transform: rotateY(0);
   width: 100%;
+  @media screen and (max-width: 991px) {
+    padding: 2rem 2rem 0 30%;
+  }
+  &--noPadding {
+    padding: 1.5rem 0 0;
+    @media screen and (max-width: 767px) {
+      padding: 1.5rem;
+    }
+  }
+  .Page__title, p {
+    width: 100%;
+  }
+  &.hide {
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    position: absolute;
+  }
 }
 .Page__title {
   font-family: $montserrat;
