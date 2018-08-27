@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Forget</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="Header">
+    <div class="container-fluid">
+      <h1 class="Header__logo">
+        <a href="index.html">
+          <img src="images/logo-forget.png" alt="Forget" class="img-fluid" />
+        </a>
+      </h1>
+    </div>
+  </header>
+
+  <section class="Page Page--vh Page--bg" style="background-image: url('./images/bg-aniversary.jpg');">
+    <section class="container">
+      <h2 class="Page__title Page__title--medium text-red text-center text-uppercase">¿Cuándo es tu aniversario?</h2>
+
+      <figure class="text-center mb-4">
+        <img src="images/icon-aniversary-red.png" alt="¿Cuándo es tu aniversario?" />
+      </figure>
+
+      <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At dicta velit libero placeat distinctio ex neque impedit nam ipsa architecto voluptate ducimus in, maiores sapiente quod animi quasi vitae omnis.</p>
+
+      <div class="row justify-content-md-center">
+        <div class="col-lg-7">
+          <form class="Form mt-4 mb-4">
+            <div class="Form__group form-group row justify-content-center">
+              <label for="date_at" class="col-md-6 col-form-label text-uppercase Form__label text-lg-right">Aniversario</label>
+              <div class="col-md-6">
+                <div class="vdp-datepicker">
+                  <div class="input-group">
+                    <span class="vdp-datepicker__calendar-button input-group-prepend">
+                      <span class="input-group-text">
+                        <i class="icon-calendar"></i>
+                      </span>
+                    </span>
+                    <input type="date" class="form-control Form__input Form__input--date is-invalid" id="date_at" readonly="readonly" />
+                  </div>
+                </div>
+                <div class="invalid-feedback">
+                  <strong>Aquí mostraremos el error</strong>
+                </div>
+              </div>
+            </div>
+            <div class="Form__group form-group row justify-content-center">
+              <label for="date_at" class="col-md-6 col-form-label text-uppercase Form__label text-lg-right">Nombre de tu pareja</label>
+              <div class="col-md-6">
+                <input type="text" class="form-control Form__input Form__input--date is-invalid" id="date_at" readonly="readonly" />
+                <div class="invalid-feedback">
+                  <strong>Aquí mostraremos el error</strong>
+                </div>
+              </div>
+            </div>
+            <div class="text-center">
+              <button type="submit" class="text-uppercase btn Btn Btn--outline Btn--outline--white Form__button">Guardar <i class="d-inline-block icon-rotate animated rotateIn infinite"></i></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <footer class="Footer">
+    <section class="container">
+      <div class="row">
+        <div class="col-6 col-lg-3 order-1 order-lg-1">
+          <h3 class="Footer__logo">
+            <a href="index.html">
+              <img class="img-fluid" src="images/logo-forget.png" alt="Forget" />
+            </a>
+          </h3>
+        </div>
+        <div class="col-lg-6 order-3 order-lg-2">
+          <nav class="Footer__nav">
+            <ul class="Footer__menu">
+              <li class="Footer__menu__item text-uppercase"><a href="#">Sobre nosotros</a></li>
+              <li class="Footer__menu__item text-uppercase"><a href="#">Proceso</a></li>
+              <li class="Footer__menu__item text-uppercase"><a href="register.html">Empieza ahora</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="col-6 col-lg-3 order-2 order-lg-3">
+          <ul class="Footer__social">
+            <li class="Footer__social__item">
+              <a href="#">
+                <i class="icon-facebook"></i>
+              </a>
+            </li>
+            <li class="Footer__social__item">
+              <a href="#">
+                <i class="icon-instagram"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </footer>
+
+  <button class="ArrowTop"><i class="icon-keyboard_arrow_up"></i></button>
+
+  <script type="text/javascript" src="js/min/bundle.js"></script>
+  <script type="text/javascript" src="js/min/script.js"></script>
+</body>
+</html>
